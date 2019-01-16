@@ -53,9 +53,20 @@ U 1 1 5C3E4E90
 P 1800 3850
 F 0 "J1" H 1850 4667 50  0000 C CNN
 F 1 "Conn_02x14_Odd_Even" H 1850 4576 50  0000 C CNN
-F 2 "leodj-kicad:PinSocket_2x14_P2.54mm_Vertical" H 1800 3850 50  0001 C CNN
+F 2 "LeoDJ-kicad:PinSocket_2x14_P2.54mm_Vertical" H 1800 3850 50  0001 C CNN
 F 3 "~" H 1800 3850 50  0001 C CNN
 	1    1800 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x14_Odd_Even J2
+U 1 1 5C3E7240
+P 1800 5550
+F 0 "J2" H 1850 6367 50  0000 C CNN
+F 1 "Conn_02x14_Odd_Even" H 1850 6276 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x14_P2.54mm_Vertical_SMD" H 1800 5550 50  0001 C CNN
+F 3 "~" H 1800 5550 50  0001 C CNN
+	1    1800 5550
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
