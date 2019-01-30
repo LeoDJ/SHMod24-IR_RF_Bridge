@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -443,9 +443,164 @@ U 5C409B61
 F0 "IR_Array" 39
 F1 "IR_Array.sch" 39
 F2 "IR_signal" I L 4150 2950 39 
+F3 "IR_rx" O L 4150 3050 50 
 $EndSheet
 Text GLabel 3950 2950 0    39   BiDi ~ 0
 P03
 Wire Wire Line
 	3950 2950 4150 2950
+Text GLabel 3950 3050 0    39   BiDi ~ 0
+P05
+Wire Wire Line
+	3950 3050 4150 3050
+$Comp
+L LeoDJ-kicad:RF_Receiver_433_MHz RF1
+U 1 1 5C424CB0
+P 4300 4300
+F 0 "RF1" H 4628 4572 60  0000 L CNN
+F 1 "RF_Receiver_433_MHz" H 4628 4466 60  0000 L CNN
+F 2 "LeoDJ-kicad:RF_Receiver_433_MHz" H 4400 4300 60  0001 C CNN
+F 3 "" H 4400 4300 60  0000 C CNN
+	1    4300 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L LeoDJ-kicad:RF_Transmitter_433_MHz RF2
+U 1 1 5C424E16
+P 4300 5350
+F 0 "RF2" H 4528 5697 60  0000 L CNN
+F 1 "RF_Transmitter_433_MHz" H 4528 5591 60  0000 L CNN
+F 2 "LeoDJ-kicad:RF_Transmitter_433_MHz" H 4300 5350 60  0001 C CNN
+F 3 "" H 4300 5350 60  0000 C CNN
+	1    4300 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0129
+U 1 1 5C424EB4
+P 4500 4300
+F 0 "#PWR0129" H 4500 4050 50  0001 C CNN
+F 1 "GND" H 4505 4127 50  0000 C CNN
+F 2 "" H 4500 4300 50  0001 C CNN
+F 3 "" H 4500 4300 50  0001 C CNN
+	1    4500 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0130
+U 1 1 5C424EF2
+P 4400 5350
+F 0 "#PWR0130" H 4400 5100 50  0001 C CNN
+F 1 "GND" H 4405 5177 50  0000 C CNN
+F 2 "" H 4400 5350 50  0001 C CNN
+F 3 "" H 4400 5350 50  0001 C CNN
+	1    4400 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0131
+U 1 1 5C424F37
+P 4000 4350
+F 0 "#PWR0131" H 4000 4200 50  0001 C CNN
+F 1 "+3V3" H 4015 4523 50  0000 C CNN
+F 2 "" H 4000 4350 50  0001 C CNN
+F 3 "" H 4000 4350 50  0001 C CNN
+	1    4000 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 4300 4200 4350
+Wire Wire Line
+	4200 4350 4000 4350
+Text GLabel 4200 4450 0    50   Input ~ 0
+P02
+Wire Wire Line
+	4200 4450 4300 4450
+Wire Wire Line
+	4300 4450 4300 4300
+Wire Wire Line
+	4300 4300 4400 4300
+Connection ~ 4300 4300
+Text GLabel 4050 5350 0    50   Input ~ 0
+P04
+Wire Wire Line
+	4050 5350 4200 5350
+$Sheet
+S 4000 5950 850  600 
+U 5C50C113
+F0 "Boost Converter" 50
+F1 "boost.sch" 50
+F2 "VIN" I L 4000 6200 50 
+F3 "VOUT" O R 4850 6250 50 
+F4 "Enable" I L 4000 6300 50 
+$EndSheet
+$Comp
+L power:+12V #PWR0136
+U 1 1 5C50FE3A
+P 5100 6050
+F 0 "#PWR0136" H 5100 5900 50  0001 C CNN
+F 1 "+12V" H 5115 6223 50  0000 C CNN
+F 2 "" H 5100 6050 50  0001 C CNN
+F 3 "" H 5100 6050 50  0001 C CNN
+	1    5100 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 6250 5100 6250
+Wire Wire Line
+	5100 6250 5100 6050
+$Comp
+L power:+12V #PWR0137
+U 1 1 5C5160C1
+P 4050 5650
+F 0 "#PWR0137" H 4050 5500 50  0001 C CNN
+F 1 "+12V" H 4065 5823 50  0000 C CNN
+F 2 "" H 4050 5650 50  0001 C CNN
+F 3 "" H 4050 5650 50  0001 C CNN
+	1    4050 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 5650 4300 5650
+Wire Wire Line
+	4300 5650 4300 5350
+$Comp
+L power:+3V3 #PWR0123
+U 1 1 5C51C62A
+P 3850 6200
+F 0 "#PWR0123" H 3850 6050 50  0001 C CNN
+F 1 "+3V3" H 3865 6373 50  0000 C CNN
+F 2 "" H 3850 6200 50  0001 C CNN
+F 3 "" H 3850 6200 50  0001 C CNN
+	1    3850 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 6200 4000 6200
+Text GLabel 3950 6300 0    39   Input ~ 0
+P06
+Wire Wire Line
+	4000 6300 3950 6300
+$Comp
+L Graphic:Logo_Open_Hardware_Small LOGO1
+U 1 1 5C523CB2
+P 10150 5200
+F 0 "LOGO1" H 10150 5475 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 10150 4975 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 10150 5200 50  0001 C CNN
+F 3 "~" H 10150 5200 50  0001 C CNN
+	1    10150 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LeoDJ-kicad:GenericGraphic GR1
+U 1 1 5C522029
+P 10200 4650
+F 0 "GR1" H 10278 4696 50  0000 L CNN
+F 1 "QR Code" H 10278 4605 50  0000 L CNN
+F 2 "LeoDJ-kicad:QR_Code_SHMod24-IRRF" H 10200 4650 50  0001 C CNN
+F 3 "" H 10200 4650 50  0001 C CNN
+	1    10200 4650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
