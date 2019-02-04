@@ -651,4 +651,15 @@ Text GLabel 2050 2500 2    39   BiDi ~ 0
 RX
 Text GLabel 2050 2400 2    39   BiDi ~ 0
 TX
+$Comp
+L LeoDJ-kicad:GenericGraphic GR2
+U 1 1 5C52CE28
+P 10200 4400
+F 0 "GR2" H 10278 4446 50  0000 L CNN
+F 1 "NightFury" H 10278 4355 50  0000 L CNN
+F 2 "LeoDJ-kicad:NightFury_Roll_8.0x6.1" H 10200 4400 50  0001 C CNN
+F 3 "" H 10200 4400 50  0001 C CNN
+	1    10200 4400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
